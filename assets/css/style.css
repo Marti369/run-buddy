@@ -1,0 +1,50 @@
+/* This is to remove margin and padding from h1 to h6 headers*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* more on this crazy alphanumerical value in a minute! */
+    color: #39a6b2;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Apply Styles to <header> */
+header {
+    padding: 20px 35px;
+    background-color: #39a6b2;
+}
+
+/* header h1 */
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin: 0;
+    display: inline;
+}
+
+/* Styles for all <a> elements*/
+header a {
+    text-decoration: none;
+    color: #fce138;
+}
+
+/* Style the <nav> element*/
+header nav {
+    float: right;
+    margin: 7px 0;
+}
+
+/* <nac> elements*/
+header nav ul li {
+    display: inline;
+}
+
+/* Style <a> elements */
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+}
