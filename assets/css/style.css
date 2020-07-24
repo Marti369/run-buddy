@@ -52,10 +52,14 @@ header nav {
 }
 
 
-/* <nac> elements*/
+/* <nav> elements*/
 
-header nav ul li {
-    display: inline;
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 
 
@@ -64,7 +68,8 @@ header nav ul li {
 header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 1.55vw;
+    /*we change tha font to 1.55vw because we are telling the broweser the font should be 1.55 percent of the screen size*/
 }
 
 
