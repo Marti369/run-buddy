@@ -24,6 +24,16 @@ header {
     /*add justify-content: (choose an option) to be able to separate the content from its parent element*/
     flex-wrap: wrap;
     /*use flex-wrap: <choose wrap> to specify that if screen gets smaller lines can greak into more line*/
+    /*This will make the header sticky and scroll down as we scroll down */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /*this is to be able to support other browsers like IE and Ios above 3 declarations*/
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 
@@ -70,6 +80,22 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 1.55vw;
     /*we change tha font to 1.55vw because we are telling the broweser the font should be 1.55 percent of the screen size*/
+}
+
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+.hero-form button:hover {
+    background-color: #39a6b2;
+}
+
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
 }
 
 
@@ -132,6 +158,8 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 
@@ -150,6 +178,7 @@ section {
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -157,13 +186,15 @@ section {
 
 .hero-form {
     color: #024e76;
-    background-color: #fce138;
+    background-color: rgba(252, 225, 56, 0.80);
     padding: 20px;
     border-style: solid;
     border-width: 3px;
     border-color: #024e76;
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -177,12 +208,19 @@ section {
 
 .form-input {
     border: 1px solid #024e76;
+    border-radius: 10px;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.form-input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
 }
 
 .hero-form label {
@@ -195,6 +233,7 @@ section {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
 }
 
 .intro p {
@@ -262,11 +301,17 @@ section {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+
+/*this will add a bottom border to all childs except the last one*/
+
+.step:not(:last-child) {
+    border-bottom: 1px solid #39a6b2;
 }
 
 
@@ -385,6 +430,14 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-form input:focus,
+.contact-fom textarea:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
 }
 
 .contact-form button {
@@ -395,6 +448,7 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
 }
 
 
@@ -510,10 +564,12 @@ WE DO NOT USE THIS ON THE PROJECT, WE USED TO PLAY WITH STYLE
         /* this will be applied on any screen smaller than 980px*/
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
     }
     header h1 {
         width: 100%;
         text-align: center;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
     header nav ul {
         margin-top: 20px;
@@ -522,6 +578,7 @@ WE DO NOT USE THIS ON THE PROJECT, WE USED TO PLAY WITH STYLE
     }
     header nav ul li a {
         font-size: 20px;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
     footer h2,
     footer div {
